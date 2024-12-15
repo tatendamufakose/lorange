@@ -1,4 +1,4 @@
-:root{
+:root {
 	--black: #040807;
 	--brownish-grey: #383637;
 	--paler-grey: #7b706a;
@@ -6,6 +6,8 @@
 	--maroon: #8C283E;
 	--bright-orange: #F75B30;
 	--paler-orange: #FF7B29;
+	--heading-font: "Spectral";
+	
 }
 
 *{
@@ -41,8 +43,26 @@
 	background-color: var(--paler-orange);
 }
 
+*{
+	margin:0;
+	padding: 0;
+	box-sizing:border-box;
+}
+
 body{
 	background-color: var(--black);
+	overflow: hidden;
+}
+
+h1, h2, h3, h4, h5, h6 {
+	color: var(--paler-grey);
+	font: var(--heading-font), serif;
+}
+
+h1{
+	font-size: 48px;
+	font-weight:300;
+	/*background-color: pink;*/
 }
 
 
@@ -54,7 +74,8 @@ body{
 	left: 75%;
 	display: flex;
 	flex-direction: column;
-	align-items: flex-end;
+	align-items: flex-end;	
+	display:none;
 }
 
 #nav ul{
@@ -62,7 +83,7 @@ body{
 	right: 0px;
 	margin: auto 0px;
 	background-color: var(--black);
-	color:var(--paler-grey);
+	color: var(--paler-grey);
 	list-style-type: none;
 	text-align: justify;
 }
@@ -79,12 +100,60 @@ body{
 	width: 100%;
 }
 
-section{
-	width: 96vw;
-	height: 96vh;
-	margin: 2vh 2vh;
-	color: var(--black);
-	background-color: var(--maroon);
-	border-radius: px;
+#btnMenu{
+	background-color: rgba(0,0,0, 0.1);
+	color: var(--bright-orange);
+	padding: 10%;
+	border: 1px solid var(--bright-orange);
+	mix-blend-mode:overlay;
 }
 
+section{
+	width: 100vw;
+	height: 100vh;
+	margin: 0 0 0 0;
+	color: var(--black);
+	background-color: var(--maroon);
+	border-radius: 0px;
+}
+
+/* Head section of page */
+.section-head{
+	height:15%;
+	background-color: var(--brown);
+	display:grid;
+	grid-template-columns: 10% auto 10%;
+	grid-column: 1/3;
+	padding:0;
+}
+
+.section-head div{
+	/*padding: 10px;*/
+	display: flex;
+	align-content:center;
+	align-items: center;
+	margin:0;
+}
+
+.site-logo {
+	border-radius: 50%;
+	height: auto;
+	width: 100px;
+	z-index:1000;
+}
+
+.section-head div h1{
+	width: 100%;
+	text-align:center;
+}
+
+/* Body section of page */
+.section-body{
+	height:70%;
+}
+
+
+/* Footer section of page */
+.section-footer{
+	height:15%;
+}
