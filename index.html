@@ -4,6 +4,7 @@
 	<title>l'orange</title>
 	<link href="style.css" rel="stylesheet" />
 	<!-- Fonts -->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 	<link rel="preconnect" href="https://fonts.googleapis.com">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 	<link href="https://fonts.googleapis.com/css2?family=Spectral:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap" rel="stylesheet">
@@ -17,8 +18,9 @@
 			<li>MENU</li>
 			<li></li>
 			<li><a href="">Home</a></li>
-			<li><a href="">What We Do</a></li>
+			<li><a href="">Our Brand</a></li>
 			<li><a href="">Our Range</a></li>
+			<li><a href="">Shop</a></li>
 			<li><a href="">Contact Us</a></li>
 			<li></li>
 		</ul>
@@ -32,20 +34,24 @@
 				<h1>l'orange</h1>
 			</div>
 			<div>
-				<button id="btnMenu" onclick="showMenu()">testing menu</button>
+				<button id="btnMenu" onclick="menuToggle()"><i class="fa fa-align-justify" style="font-size:36px;" ></i></button>
 			</div>
 		</div>
 
 		<div class="section-body">
-			<div class="banner-text">
-				<h1>Add some sizzle to your day</h1>
-				<h3>whatever the occasion</h3>
-				<p>Our luxury range of sensual wear will have you feeling fun, fit and confident.</p>
-			</div>
+			<div id="banner-grid-container">
+				<div class="banner-text">
+					<h1>Add some sizzle to your day</h1>
+					<h3>whatever the occasion, whenever the mood strikes</h3>
+					<p>our luxury range of sensual wear will have you feeling fun, fit and fantastically confident.</p>
+					<a href="" class="cta">Start Shopping!</a>
+				</div>
 
-			<div class="featured-image">
-				<img src="" alt="Featured Product">
+				<div class="featured-product-image">
+					<img src="" alt="Featured Product">
+				</div>
 			</div>
+			
 
 		</div>
 
@@ -55,14 +61,22 @@
 	</section>
 
     <script>
-		function showMenu() {
+		function menuToggle(){
+			//alert("We are here");
 			let navmenu = document.getElementById("nav");
-			navmenu.style.display = "flex";
+			if (navmenu.style.display === "none") {
+				showMenu();
+			} else{
+				hideMenu();
+			}	
+		}
+
+		function showMenu() {
+			document.getElementById("nav").style.display = "flex";
 		}
 
 		function hideMenu() {
-            let navmenu = document.getElementById("nav");
-            navmenu.style.display = "none";
+            document.getElementById("nav").style.display = "none";
 		}
 	</script>
 

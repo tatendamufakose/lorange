@@ -56,7 +56,8 @@ body{
 
 h1, h2, h3, h4, h5, h6 {
 	color: var(--paler-grey);
-	font: var(--heading-font), serif;
+	/* font: var(--heading-font), serif; */
+	font: ExtraBold 800 italic Spectral;
 }
 
 h1{
@@ -152,6 +153,29 @@ section{
 	height:70%;
 }
 
+#banner-grid-container{
+	/* Divide space into 3x3 grid */
+	display: grid;
+	grid-template-columns: auto auto auto;
+	grid-template-rows: auto auto auto;
+	align-content: space-around;
+}
+
+.banner-text{
+	grid-column: 1 / 2;
+	grid-row: 2/3;
+
+	display:flex;
+	flex-direction: column;
+	padding: auto;
+	margin: auto 20px;
+	max-width:100%;
+}
+
+.featured-product-image{
+	grid-column: 2 / 3;
+	grid-row: 2/3;
+}
 
 /* Footer section of page */
 .section-footer{
