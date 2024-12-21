@@ -172,6 +172,11 @@ section{
 	max-width:100%;
 }
 
+.banner-Image{
+	max-width: 50%;
+	height: auto;
+}
+
 .featured-product-image{
 	grid-column: 2 / 3;
 	grid-row: 2/3;
